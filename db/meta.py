@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Integer, Sequence, Float
+from sqlalchemy import Column, String, Integer, Sequence, Float, Date
 from sqlalchemy.ext.declarative import declarative_base
 
 
@@ -20,7 +20,11 @@ class Book(Base):
     isbn_10 = Column(String(20))
     isbn_13 = Column(String(20))
     rank = Column(Integer)
-    publisher = Column(String(200))
+    publisher = Column(String(400))
     weight_str = Column(String(50))
     dimensions_str = Column(String(50))
     price = Column(Float)
+    weigth_grams = Column(Float)
+    volume_cm3 = Column(Float)
+    publish_date = Column(Date)
+    publisher_name = Column(String(100))
